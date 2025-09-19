@@ -1,0 +1,7 @@
+job_id,duration,type
+J1,30,cutting
+J2,60,welding
+J3,120,assembly
+J4,45,cutting
+J5,90,welding
+J6,60,assembly

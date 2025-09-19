@@ -1,0 +1,20 @@
+scheduling_task:
+  description: >
+    Use the jobs loaded from the jobs file. Each job has a type
+    (cutting, welding, assembly). Assign each job to the correct
+    machine based on specialization, while considering availability
+    and duration. Create a production schedule in tabular format
+    showing job, machine, start time, and end time.
+  agent: manager
+  expected_output: |
+    | Job | Type     | Machine           | Start Time | End Time |
+    |-----|----------|------------------|------------|----------|
+    | J1  | cutting  | Cutting Machine  | 08:00      | 08:30   |
+    | J2  | welding  | Welding Machine  | 08:00      | 09:00   |
+    | J3  | assembly | Assembly Machine | 09:00      | 11:00   |
+
+execution_tasks:
+  description: >
+    Each worker executes only the jobs of its type assigned by the
+    Manager and confirms completion.
+  agent: [worker1, worker2, worker3]
